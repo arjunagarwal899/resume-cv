@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # LaTeX Setup Script for Arjun's CV
-# This script installs all necessary LaTeX packages required to build cv.tex
+# This script installs all necessary LaTeX packages required to build resume-cv.tex
 # Works on macOS and Linux systems
 
 set -e  # Exit on error
@@ -164,7 +164,7 @@ if [ ${#FAILED_PACKAGES[@]} -eq 0 ]; then
     print_success "All packages installed successfully!"
     echo ""
     print_info "You can now build the CV with:"
-    echo "  latexmk -pdf -synctex=1 -interaction=nonstopmode cv.tex"
+    echo "  latexmk -pdf -synctex=1 -interaction=nonstopmode resume-cv.tex"
     echo ""
     print_info "Or use your LaTeX editor (VS Code with LaTeX Workshop extension)"
 else
