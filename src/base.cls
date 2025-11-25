@@ -113,6 +113,7 @@
 }
 
 \newcommand{\cvNormalText}[1]{{\color{body}\small{#1}}}
+\newcommand{\cvOverviewText}[1]{{\color{body}\normalsize{#1}}}
 \newcommand{\cvEmphasizedText}[1]{{\color{bodylight}\small\emph{#1}}}
 \newcommand{\cvProminentText}[1]{{\color{emphasis}{\normalsize{#1}}}}
 
