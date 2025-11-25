@@ -7,11 +7,7 @@
 
 \newcommand{\PositionOfResponsibilityEntry}[8]{%
     \cvEvent
-        {\cvEmphasizedText{#1}}%
-        {\cvProminentText{#2}}%
-        {\cvNormalText{#3}}%
-        {\cvDuration{#4}{#5}{#6}{#7}}%
-        {}{}{}{}%
+        {\cvEmphasizedText{#1}\newline\cvProminentText{#2}\newline\cvNormalText{#3}\newline\cvDuration{#4}{#5}{#6}{#7}}%
         {#8}%
 }
 

@@ -7,10 +7,7 @@
 
 \newcommand{\TeachingExperienceEntry}[7]{%
     \cvEvent
-        {\cvProminentText{#1}}%
-        {\cvNormalText{#2}}%
-        {\cvDuration{#3}{#4}{#5}{#6}}%
-        {}{}{}{}{}%
+        {\cvProminentText{#1}\newline\cvNormalText{#2}\newline\cvDuration{#3}{#4}{#5}{#6}}%
         {#7}%
 }
 

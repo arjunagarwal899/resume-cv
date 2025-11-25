@@ -146,19 +146,12 @@
     }
 }
 
-\newcommand{\cvEvent}[9]{%
+\newcommand{\cvEvent}[2]{%
     \setlength{\tabcolsep}{6pt}%
     \begin{tabular}{m{5.3cm}|m{13.45cm}}
         \centering
-            \ifstrequal{#1}{}{}{#1}%
-            \ifstrequal{#2}{}{} {\newline#2}%
-            \ifstrequal{#3}{}{} {\newline#3}%
-            \ifstrequal{#4}{}{} {\newline#4}%
-            \ifstrequal{#5}{}{} {\newline#5}%
-            \ifstrequal{#6}{}{} {\newline#6}%
-            \ifstrequal{#7}{}{} {\newline#7}%
-            \ifstrequal{#8}{}{} {\newline#8}%
-        & #9
+            #1
+        & #2
         \vspace{-\baselineskip}
     \end{tabular}
 }

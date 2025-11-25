@@ -9,18 +9,11 @@
     \ifstrequal{#4}{}
     {
         \cvEvent
-            {\cvEmphasizedText{#1}}
-            {\cvProminentText{#2}}
-            {\cvNormalText{#3}}
-            {}{}{}{}{}
+            {\cvEmphasizedText{#1}\newline\cvProminentText{#2}\newline\cvNormalText{#3}}
             {#5}
     } {
         \cvEvent
-            {\cvEmphasizedText{#1}}
-            {\cvProminentText{#2}}
-            {\cvNormalText{#3}}
-            {\footnotesize\color{bodylight}#4}
-            {}{}{}{}
+            {\cvEmphasizedText{#1}\newline\cvProminentText{#2}\newline\cvNormalText{#3}\newline{\footnotesize\color{bodylight}#4}}
             {#5}
     }
 }
