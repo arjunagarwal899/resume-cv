@@ -1,4 +1,4 @@
-\ProvidesFile{work_experience.cls}[2025/11/25 Work experience helpers]
+\ProvidesFile{work_experience.cls}[Work experience helpers]
 
 \newcommand{\WorkExperienceSection}[1]{%
     \cvHeading{Work Experience}%

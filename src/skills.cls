@@ -1,4 +1,4 @@
-\ProvidesFile{skills.cls}[2025/11/25 Skills helpers]
+\ProvidesFile{skills.cls}[Skills helpers]
 
 \newcommand{\SkillsSection}[1]{%
     \cvHeading{Technical Skills}%

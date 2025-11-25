@@ -1,4 +1,4 @@
-\ProvidesFile{positions_of_responsibility.cls}[2025/11/25 Positions of responsibility helpers]
+\ProvidesFile{positions_of_responsibility.cls}[Positions of responsibility helpers]
 
 \newcommand{\PositionsOfResponsibilitySection}[1]{%
     \cvHeading{Positions of Responsibility}%

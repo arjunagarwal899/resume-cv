@@ -1,4 +1,4 @@
-\ProvidesFile{certifications.cls}[2025/11/25 Certifications helpers]
+\ProvidesFile{certifications.cls}[Certifications helpers]
 
 \newcommand{\CertificationsSection}[1]{%
     \cvHeading{Certifications}%

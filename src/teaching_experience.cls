@@ -1,4 +1,4 @@
-\ProvidesFile{teaching_experience.cls}[2025/11/25 Teaching experience helpers]
+\ProvidesFile{teaching_experience.cls}[Teaching experience helpers]
 
 \newcommand{\TeachingExperienceSection}[1]{%
     \cvHeading{Teaching Experience}%

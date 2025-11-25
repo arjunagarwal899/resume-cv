@@ -1,4 +1,4 @@
-\ProvidesFile{honors_awards.cls}[2025/11/25 Honors and awards helpers]
+\ProvidesFile{honors_awards.cls}[Honors and awards helpers]
 
 \newcommand{\HonorsAwardsSection}[1]{%
     \cvHeading{Honors \& Awards}%

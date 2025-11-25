@@ -1,4 +1,4 @@
-\ProvidesFile{publications.cls}[2025/11/25 Publications and patents helpers]
+\ProvidesFile{publications.cls}[Publications and patents helpers]
 
 \newcommand{\PatentEntry}[6]{%
     \href{#6}{#1\ifstrequal{#2}{}{}{ (#2)}. #3. \emph{#4}. #5}%

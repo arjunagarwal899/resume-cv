@@ -1,4 +1,4 @@
-\ProvidesFile{research_experience.cls}[2025/11/25 Research experience helpers]
+\ProvidesFile{research_experience.cls}[Research experience helpers]
 
 \newcommand{\ResearchExperienceSection}[1]{%
     \cvHeading{Research Experience}%

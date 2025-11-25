@@ -1,4 +1,4 @@
-\ProvidesFile{education.cls}[2025/11/25 Education helpers]
+\ProvidesFile{education.cls}[Education helpers]
 
 \newcommand{\EducationSection}[1]{%
     \cvHeading{Education}%

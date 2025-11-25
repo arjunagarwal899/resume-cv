@@ -1,4 +1,4 @@
-\ProvidesClass{base}[2025/11/25 Base resume class]
+\ProvidesClass{base}[Base resume class]
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{extarticle}}
