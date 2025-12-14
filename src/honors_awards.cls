@@ -1,15 +1,21 @@
 \ProvidesFile{honors_awards.cls}[Honors and awards helpers]
 
-\newcommand{\HonorsAwardsSection}[1]{%
-    \cvHeading{Honors \& Awards}%
-    \input{#1}%
+\newcommand{\cvHonorBox}[3]{
+    \centering
+        \ifstrequal{#1}{}{}{#1}
+        \ifstrequal{#2}{}{}{\vspace{1pt}\newline#2}
+        \ifstrequal{#3}{}{}{\vspace{1pt}\newline#3}
 }
 
-\newcommand{\HonorAchievement}[3]{%
-    \cvEventBoxOnly
-        {\footnotesize\color{bodylight}\emph{#1}\vspace{3pt}}%
-        {\cvProminentText{#2}\vspace{2pt}}%
-        {\footnotesize\color{bodylight}#3}%
+\newcommand{\HonorAchievement}[3]{
+    \cvHonorBox
+        {\bodyLightColor{\accessoryTextSize{\emph{#1}}}}
+        {\accentColor{\prominentTextSize{#2}}}
+        {\bodyLightColor{\accessoryTextSize{#3}}}
 }
 
-\endinput
+
+\newcommand{\HonorsAwardsSection}[1]{
+    \cvHeading{Honors \& Awards}
+    \input{#1}
+}

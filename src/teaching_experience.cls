@@ -1,14 +1,21 @@
 \ProvidesFile{teaching_experience.cls}[Teaching experience helpers]
 
-\newcommand{\TeachingExperienceSection}[1]{%
-    \cvHeading{Teaching Experience}%
-    \input{#1}%
-}
-
-\newcommand{\TeachingExperienceEntry}[7]{%
+\newcommand{\TeachingExperienceEntry}[4]{
     \cvEvent
-        {\cvProminentText{#1}\newline\cvNormalText{#2}\newline\cvDuration{#3}{#4}{#5}{#6}}%
-        {#7}%
+        {
+            \accentColor{\prominentTextSize{#1}}
+            \newline
+            \bodyColor{\bodyTextSize{#2}}
+            \newline
+            \bodyLightColor{\accessoryTextSize{#3}}
+        }{
+            \bodyTextSize{#4}
+        }
 }
 
-\endinput
+
+\newcommand{\TeachingExperienceSection}[1]{
+    \cvHeading{Teaching Experience}
+    \input{#1}
+}
+

@@ -1,14 +1,23 @@
 \ProvidesFile{positions_of_responsibility.cls}[Positions of responsibility helpers]
 
-\newcommand{\PositionsOfResponsibilitySection}[1]{%
-    \cvHeading{Positions of Responsibility}%
-    \input{#1}%
-}
-
-\newcommand{\PositionOfResponsibilityEntry}[8]{%
+\newcommand{\PositionOfResponsibilityEntry}[5]{
     \cvEvent
-        {\cvEmphasizedText{#1}\newline\cvProminentText{#2}\newline\cvNormalText{#3}\newline\cvDuration{#4}{#5}{#6}{#7}}%
-        {#8}%
+        {
+            \bodyLightColor{\bodyTextSize{\emph{#1}}}
+            \newline
+            \accentColor{\prominentTextSize{#2}}
+            \newline
+            \bodyColor{\bodyTextSize{#3}}
+            \newline
+            \bodyLightColor{\accessoryTextSize{#4}}
+        }
+        {
+            \bodyColor{\bodyTextSize{#5}}
+        }
 }
 
-\endinput
+
+\newcommand{\PositionsOfResponsibilitySection}[1]{
+    \cvHeading{Positions of Responsibility}
+    \input{#1}
+}

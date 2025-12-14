@@ -1,16 +1,16 @@
 \ProvidesFile{education.cls}[Education helpers]
 
-\newcommand{\EducationSection}[1]{%
-    \cvHeading{Education}%
-    \input{#1}%
+\newcommand{\EducationInstitution}[1]{\bodyColor{\subHeadingSize{\textbf{#1}}}}
+
+\newcommand{\EducationProgram}[4]{
+    \accentColor{
+        \cvTextWithSymbol{\bodyTextSize{#1}}{\prominentTextSize{\textbf{#2}\hfill\bodyColor{\bodyTextSize{#3}}}}
+    }
+
+    \bodyTextSize{#4}
 }
 
-\newcommand{\EducationInstitution}[1]{{\color{body}\large\bfseries{#1}}}
-
-\newcommand{\EducationProgram}[3]{%
-    {\color{accent}\cvMainPoint{#1}{\bfseries #2\hfill #3}}%
+\newcommand{\EducationSection}[1]{
+    \cvHeading{Education}
+    \input{#1}
 }
-
-\newcommand{\EducationDetail}[1]{\qquad\cvPoint{}{#1}}
-
-\endinput

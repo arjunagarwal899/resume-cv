@@ -1,8 +1,9 @@
 \documentclass[10pt,legalpaper]{src/base}
 
+\input{src/header.cls}
 \input{src/work_experience.cls}
 \input{src/education.cls}
-\input{src/publications.cls}
+\input{src/patents_publications.cls}
 \input{src/honors_awards.cls}
 \input{src/skills.cls}
 \input{src/certifications.cls}
@@ -24,37 +25,39 @@
 \arrayrulecolor{dividers}
 
 \begin{document}
-    \input{rsrc/personal_info.tex}
-    
-    \begin{fullwidth}
-        \makecvheader
-    \end{fullwidth}
 
-    \AtBeginEnvironment{itemize}{\normalsize}
-    
-    \setlength{\columnseprule}{1pt}
-    \setlength{\columnsep}{1cm}
+\AtBeginEnvironment{itemize}{\normalsize}
 
-    % \vspace{15pt}
-    % \input{rsrc/overview.tex}
-    \vspace{5pt}
-    
-    \WorkExperienceSection{rsrc/work_experience.tex}
-    \medskip
-    \EducationSection{rsrc/education.tex}
-    \medskip
-    \PatentsAndPublicationsSection{rsrc/patents_publications.tex}
-    \medskip
-    \ResearchExperienceSection{rsrc/research_experience.tex}
-    \medskip
-    \TeachingExperienceSection{rsrc/teaching_experience.tex}
-    \medskip
-    \HonorsAwardsSection{rsrc/honors_awards.tex}
-    \medskip
-    \SkillsSection{rsrc/technical_skills.tex}
-    \medskip
-    \CertificationsSection{rsrc/certifications.tex}
-    \medskip
-    \PositionsOfResponsibilitySection{rsrc/positions_of_responsibility.tex}
+\HeaderSection{rsrc/header.tex}
+\medskip
+\input{rsrc/overview.tex}
+\medskip
+
+\WorkExperienceSection{rsrc/work_experience.tex}
+\medskip
+
+\EducationSection{rsrc/education.tex}
+\medskip
+
+\PatentsAndPublicationsSection{rsrc/patents_publications.tex}
+\medskip
+
+\ResearchExperienceSection{rsrc/research_experience.tex}
+\medskip
+
+\TeachingExperienceSection{rsrc/teaching_experience.tex}
+\medskip
+
+\HonorsAwardsSection{rsrc/honors_awards.tex}
+\medskip
+
+\SkillsSection{rsrc/skills.tex}
+\medskip
+
+\CertificationsSection{rsrc/certifications.tex}
+\medskip
+
+\PositionsOfResponsibilitySection{rsrc/positions_of_responsibility.tex}
+
 \end{document}
 

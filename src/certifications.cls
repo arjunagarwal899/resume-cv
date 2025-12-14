@@ -1,48 +1,47 @@
 \ProvidesFile{certifications.cls}[Certifications helpers]
 
-\newcommand{\CertificationsSection}[1]{%
-    \cvHeading{Certifications}%
-    \input{#1}%
-}
-
-\newcommand{\CertificationEntry}[5]{%
-    \ifstrequal{#4}{}
-    {
-        \cvEvent
-            {\cvEmphasizedText{#1}\newline\cvProminentText{#2}\newline\cvNormalText{#3}}
-            {#5}
-    } {
-        \cvEvent
-            {\cvEmphasizedText{#1}\newline\cvProminentText{#2}\newline\cvNormalText{#3}\newline{\footnotesize\color{bodylight}#4}}
-            {#5}
-    }
-}
-
-\newcommand{\SpecialCertificationEntry}[8]{%
-    \setlength{\tabcolsep}{6pt}%
-    \begin{tabular}{m{5.3cm}m{13.45cm}}
-        \multirow{1}{5.3cm}{
-            \centering
-                \cvEmphasizedText{#1}
-                \newline
-                \cvProminentText{#2}
-                \vspace{5pt}
-                \newline
-                \cvEmphasizedText{#3}
-                \newline
-                \cvProminentText{#4}
-                \vspace{5pt}
-                \newline
-                \cvNormalText{#5}
-                \newline
-                {\footnotesize\color{bodylight}#6}
+\newcommand{\CertificationEntry}[5]{
+    \cvEvent
+        {
+            \bodyLightColor{\bodyTextSize{\emph{#1}}}
+            \newline
+            \accentColor{\prominentTextSize{#2}}
+            \newline
+            \bodyColor{\bodyTextSize{#3}}
+            \ifstrequal{#4}{}{}{\newline\bodyLightColor{\accessoryTextSize{#4}}}
         }
-        & \multicolumn{1}{|m{13.45cm}}{#7\vspace{-\baselineskip}}
-        \\[ -5pt ]
+        {
+            \bodyColor{\bodyTextSize{#5}}
+        }
+}
+
+\newcommand{\MLDLCertificationEntry}[8]{
+    \begin{tabular}{m{5.35cm}m{13.4cm}}
+        \multirow{3}{5.35cm}{
+            \centering
+                \bodyLightColor{\bodyTextSize{\emph{#1}}}
+                \newline
+                \accentColor{\prominentTextSize{#2}}
+                \vspace{5pt}
+                \newline
+                \bodyLightColor{\bodyTextSize{\emph{#3}}}
+                \newline
+                \accentColor{\prominentTextSize{#4}}
+                \vspace{5pt}
+                \newline
+                \bodyColor{\bodyTextSize{#5}}
+                \newline
+                \bodyLightColor{\accessoryTextSize{#6}}
+        }
+        & \multicolumn{1}{|m{13.4cm}}{\bodyColor{\bodyTextSize{#7}}}
+        \\[ -3pt ]
         \\
-        & \multicolumn{1}{|m{13.45cm}}{#8\vspace{-\baselineskip}}
-        \vspace{2pt}
+        & \multicolumn{1}{|m{13.4cm}}{\bodyColor{\bodyTextSize{#8}}}
     \end{tabular}
 }
 
-\endinput
+
+\newcommand{\CertificationsSection}[1]{
+    \cvHeading{Certifications}
+    \input{#1}
+}
