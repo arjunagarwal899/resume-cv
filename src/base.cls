@@ -88,6 +88,45 @@
     \ifstrequal{#3}{}{}{\hspace{0.5em}\cvTimeDuration{#3}}
 }
 
+% Duration helpers to auto-compute years and months since a start date
+\newcount\cvDurationTotalMonths
+\newcount\cvDurationHelper
+\newcount\cvDurationYearsCount
+\newcount\cvDurationRemainingMonths
+
+\newcommand{\cvFormatYearsMonths}[2]{
+    \ifnum#1>0
+        #1~\ifnum#1=1 year\else years\fi
+        \ifnum#2>0 \space#2~\ifnum#2=1 month\else months\fi\fi
+    \else
+        \ifnum#2>0
+            #2~\ifnum#2=1 month\else months\fi
+        \else
+            Less than a month%
+        \fi
+    \fi
+}
+
+\newcommand{\cvDurationSinceDate}[2]{%
+    \begingroup
+    \cvDurationTotalMonths=\year
+    \advance\cvDurationTotalMonths by -#1
+    \multiply\cvDurationTotalMonths by 12
+    \cvDurationHelper=\month
+    \advance\cvDurationHelper by -#2
+    \advance\cvDurationTotalMonths by \cvDurationHelper
+    \advance\cvDurationTotalMonths by 1
+    \ifnum\cvDurationTotalMonths<0 \cvDurationTotalMonths=0\fi
+    \cvDurationYearsCount=\cvDurationTotalMonths
+    \divide\cvDurationYearsCount by 12
+    \cvDurationRemainingMonths=\cvDurationTotalMonths
+    \cvDurationHelper=\cvDurationYearsCount
+    \multiply\cvDurationHelper by 12
+    \advance\cvDurationRemainingMonths by -\cvDurationHelper
+    \edef\cvDurationTmp{\endgroup\cvFormatYearsMonths{\number\cvDurationYearsCount}{\number\cvDurationRemainingMonths}}%
+    \cvDurationTmp
+}
+
 % Points
 \newcommand{\cvTextWithSymbol}[2]{
     #1\hspace{0.2em}#2
